@@ -4,8 +4,10 @@ class VerificaDuplicados {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] elems = sc.nextLine().split(" ");
-        System.out.println(temDuplicado(elems));
+        while (sc.hasNextLine()) {
+            String[] elems = sc.nextLine().split(" ");
+            System.out.println(temDuplicado(elems));
+        }
     }
 
     public static boolean temDuplicado(String[] elems){
