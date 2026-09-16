@@ -1,6 +1,7 @@
+package analise_assintotica;
 import java.util.*;
 
-class VerificaDuplicados {
+class VerificaDuplicadoComSet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -11,13 +12,11 @@ class VerificaDuplicados {
     }
 
     public static boolean temDuplicado(String[] elems){
-        for (int i = 0; i < elems.length; i++) {
-            for (int j = 0; j < elems.length; j++) {
-                if ((i != j) && (elems[i].equals(elems[j]))) {
-                    return true;
-                }
-            }
+        Set<String> elem = new HashSet<>();
+        for (String e: elems){
+            elem.add(e);
         }
+        if (elems.length != elem.size()) return true;
         return false;
     }
 }
