@@ -1,10 +1,7 @@
-package ordenacao_n2;
+package ordenacao;
 
-public class SelectionSort implements Sorting<T> {
+public class SelectionSort implements Sorting {
 
-    /**
-    * Ordena um array de inteiros utilizando o selection sort.
-    */
     public void sort(int[] v) {
         for (int i = 0; i < v.length - 1; i ++) {
         	int imenor = i;
@@ -24,8 +21,19 @@ public class SelectionSort implements Sorting<T> {
     * Você não pode mudar a assinatura desse método, mas pode/deve criar outros
     * métodos para te auxiliar na recursão.
     */
-    public void sortRecursivo(int[] v) {
-        // TODO: implementar
+    public void sortRecursivo(int[] v, int i) {
+        if (i == v.length-1) return;
+        
+        int imenor = i;
+        for (int j = i + 1; j < v.length; j++){
+            if (v[j] < v[imenor]) imenor = j;
+        }
+        
+        int temp = v[i];
+        v[i] = v[imenor];
+        v[imenor] = temp;
+
+        sortRecursivo(v, i+1);
     }
     
 }

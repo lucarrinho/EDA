@@ -1,4 +1,4 @@
-package ordenacao_n2;
+package ordenacao;
 
 public interface Sorting{
 	public void sort(int[] elements);

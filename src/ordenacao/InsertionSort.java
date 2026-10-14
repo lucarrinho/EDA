@@ -1,4 +1,4 @@
-package ordenacao_n2;
+package ordenacao;
 
 public class InsertionSort implements Sorting {
     /**
