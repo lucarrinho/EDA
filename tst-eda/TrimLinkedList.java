@@ -1,4 +1,22 @@
-import java.utils.*;
+import java.util.*;
+
+public class main{
+	public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        TrimLinkedList link = new TrimLinkedList();
+
+        String[] ent = sc.nextLine().split(" ");
+        for (int i = 0; i < ent.length; i++)
+             link.addLast(Integer.parseInt(ent[i]));
+
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++){
+            link.removeFirst();
+            link.removeLast();
+            System.out.println(link.toString());
+        }
+    }
+}
 
 class TrimLinkedList {
     Node head;
@@ -57,22 +75,6 @@ class TrimLinkedList {
             ans += " " + aux.value;
         }
         return ans;
-    }
-
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        TrimLinkedList link = new TrimLinkedList();
-
-        String[] ent = sc.nextLine().split(" ");
-        for (int i = 0; i < ent.length; i++)
-             link.addLast(Integer.parseInt(ent[i]));
-
-        int n = sc.nextInt();
-        for (int i = 0; i < n; i++){
-            link.removeFirst();
-            link.removeLast();
-            System.out.println(link.toString());
-        }
     }
 }
 
