@@ -1,3 +1,5 @@
+import java.utils.*;
+
 class TrimLinkedList {
     Node head;
     Node tail;
